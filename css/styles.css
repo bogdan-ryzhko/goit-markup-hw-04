@@ -17,6 +17,7 @@
 	--black-color: #000000;
 	--team-bg: #F5F4FA;
 	--card-list-gap: 27px;
+	--icon-color: #AFB1B8;
 }
 
 body {
@@ -81,7 +82,7 @@ img {
 /* ----------------------------- Шапка----------------------------- */
 
 .header {
-	padding: 24px 0 25px;
+	min-height: 80px;
 	border-bottom: 1px solid #ECECEC;
 }
 
@@ -154,7 +155,8 @@ img {
 .header-link {
 	color: var(--descr-color);
 	padding: 32px 0;
-	position: relative;
+	display: flex;
+	align-items: center;
 }
 
 .main-link {
@@ -170,26 +172,14 @@ img {
 	color: var(--brand-color);
 }
 
-.mail::before,
-.phone::before {
-	content: '';
-	position: absolute;
-	top: 50%;
-	transform: translateY(-50%);
+.header-icon {
+	fill: #757575;
+	margin-right: 10px;
 }
 
-.mail::before {
-	left: -25px;
-	width: 16px;
-	height: 12px;
-	background-image: url('../images/mail.svg');
-}
-
-.phone::before {
-	left: -15px;
-	width: 10px;
-	height: 16px;
-	background-image: url('../images/phone.svg');
+.main-link:hover .header-icon,
+.main-link:focus .header-icon {
+	fill: var(--brand-color);
 }
 
 /* ----------------------------- Герой ----------------------------- */
@@ -342,17 +332,18 @@ img {
 	justify-content: center;
 }
 
+.team-soc-item+.team-soc-item {
+	margin-left: 10px;
+}
+
 .team-soc-link {
 	display: flex;
 	justify-content: center;
 	align-items: center;
 	padding: 12px;
 	border-radius: 100%;
-	color: #ffffff;
-}
-
-.team-soc-link+.team-soc-link {
-	margin-left: 10px;
+	color: var(--icon-color);
+	transition: all 0.3s ease;
 }
 
 .team-soc-icon {
@@ -365,13 +356,6 @@ img {
 	color: #ffffff;
 }
 
-
-
-/* .team-soc-link:hover .team-soc-icon,
-.team-soc-link:focus .team-soc-icon {
-	fill: #000000;
-} */
-
 /* ----------------------------- Постійні клієнти ----------------------------- */
 
 .clients-list {
@@ -383,19 +367,20 @@ img {
 .clients-link {
 	display: block;
 	padding: 16px 32px;
-	border: 1px solid #AFB1B8;
+	border: 1px solid var(--icon-color);
 	border-radius: 4px;
 	transition: all 0.3s ease;
+	color: var(--icon-color);
+}
+
+.clients-icon {
+	fill: currentColor;
 }
 
 .clients-link:hover,
 .clients-link:focus {
 	border: 1px solid var(--brand-color);
-}
-
-.clients-link:hover>.clients-icon,
-.clients-link:focus>.clients-icon {
-	fill: #ffffff;
+	color: var(--brand-color);
 }
 
 /* ----------------------------- Навігація Портфоліо ----------------------------- */
@@ -553,12 +538,17 @@ img {
 
 .footer-soc-link {
 	display: flex;
-	padding: 14px 12px;
+	padding: 12px;
+	color: var(--white-color);
 	justify-content: center;
 	align-items: center;
 	border-radius: 50%;
 	background-color: rgba(255, 255, 255, 0.1);
 	transition: all 0.3s ease;
+}
+
+.footer-soc-icon {
+	fill: currentColor;
 }
 
 .footer-soc-link:hover {
