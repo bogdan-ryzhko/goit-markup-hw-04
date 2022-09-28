@@ -339,7 +339,7 @@ img {
 
 .team-soc-list {
 	display: flex;
-	justify-content: space-evenly;
+	justify-content: center;
 }
 
 .team-soc-link {
@@ -348,18 +348,29 @@ img {
 	align-items: center;
 	padding: 12px;
 	border-radius: 100%;
+	color: #ffffff;
 }
 
+.team-soc-link+.team-soc-link {
+	margin-left: 10px;
+}
+
+.team-soc-icon {
+	fill: currentColor;
+}
 
 .team-soc-link:hover,
 .team-soc-link:focus {
 	background-color: var(--brand-color);
+	color: #ffffff;
 }
 
-.team-soc-link:hover>.team-soc-icon path,
-.team-soc-link:focus>.team-soc-icon path {
-	fill: var(--white-color);
-}
+
+
+/* .team-soc-link:hover .team-soc-icon,
+.team-soc-link:focus .team-soc-icon {
+	fill: #000000;
+} */
 
 /* ----------------------------- Постійні клієнти ----------------------------- */
 
