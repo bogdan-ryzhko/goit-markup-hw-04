@@ -173,7 +173,7 @@ img {
 }
 
 .header-icon {
-	fill: #757575;
+	fill: var(--descr-color);
 	margin-right: 10px;
 }
 
@@ -352,7 +352,7 @@ img {
 .team-soc-link:hover,
 .team-soc-link:focus {
 	background-color: var(--brand-color);
-	color: #ffffff;
+	color: var(--white-color);
 }
 
 /* ----------------------------- Постійні клієнти ----------------------------- */
