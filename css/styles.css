@@ -481,6 +481,7 @@ img {
 
 .footer-inner {
 	display: flex;
+	align-items: baseline;
 }
 
 .footer-inner-content+.footer-inner-content {
